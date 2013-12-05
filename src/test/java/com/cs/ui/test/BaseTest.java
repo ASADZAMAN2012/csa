@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeTest;
 
 public class BaseTest 
 {
-	public static FirefoxDriver driver = new FirefoxDriver();
+	protected static FirefoxDriver driver = new FirefoxDriver();
 	
 	@BeforeTest
 	public void start()

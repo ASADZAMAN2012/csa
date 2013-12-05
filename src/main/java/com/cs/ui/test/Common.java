@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 
 public class Common extends BaseTest
 {
+	
+	
 	public void clickBuyTicket()
 	{
 		try
@@ -138,25 +140,28 @@ public class Common extends BaseTest
 	
 	public void verifyElementPresent(By by, String eleName) throws Exception
 	{
-		Thread.sleep(3000);
-		if(driver.findElements(by).size() != 0){
-			System.out.println(eleName + "elemnet present");
-			}
-		else{
-			System.out.println(eleName + "element not found");
-			}
+		Thread.sleep(2000);
+		
+		if(driver.findElements(by).size() != 0)
+		{
+			
+		}
+		else
+		{
+			System.out.println("'"+eleName + "' element not found");
+		}
 	}
 	
 	public void verifyTextPresent(String text) throws Exception
 	{
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		if(driver.getPageSource().contains(text))
 		  {
-		    System.out.println(text + "found");
+		    
 		  }
 		else
 		  {
-		    System.out.println(text + "not found");
+		    System.out.println("'"+text + "' text not found");
 		  }
 	}
 	
@@ -524,7 +529,7 @@ public class Common extends BaseTest
 	
 	public void logout() throws Exception
 	{	
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		try 
 		{
 			driver.findElement(By.xpath("//a[contains(@href,'logout') and contains(text(),'Logout')]")).click();
